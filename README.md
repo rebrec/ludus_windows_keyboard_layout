@@ -1,19 +1,13 @@
 # README
 
-This template includes a task yml for caching downloads to the Ludus host (download_file.yml) as well as GitHub action to push the role to Ansible Galaxy when a tag is created in git. You'll need to get a [Galaxy token](https://galaxy.ansible.com/ui/token/) and set it as `GALAXY_API_KEY` in [Github Secrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository) for the Ansible Galaxy deployment to work correctly.
+# Ansible Role: ludus_windows_keyboard_layout ([Ludus](https://ludus.cloud))
 
-Remove this section, and replace all `{{ variable }}` strings. Write your tasks in `./tasks/main.yml`
+An Ansible Role that installs specific keyboard layout to windows hosts. By default, will install french layout but can be modified using the var `ludus_windows_keyboard_layout`.
 
-# Ansible Role: {{ Thing }} ([Ludus](https://ludus.cloud))
-
-An Ansible Role that installs [{{ Something }}](https://example.com) on {{ type of host }} and optionally configures [{{ Another Thing }}](https://example).
-
-> [!WARNING]
-> This is a warning about something in this role
 
 ## Requirements
 
-None.
+Working only for Windows hosts.
 
 ## Role Variables
 
@@ -29,7 +23,7 @@ None.
 ## Example Playbook
 
 ```yaml
-- hosts: {{ thing }}_hosts
+- hosts: ludus_windows_keyboard_layout_hosts
   roles:
     - rebrec.ludus_windows_keyboard_layout
   vars:
@@ -54,15 +48,13 @@ ludus:
       role: primary-dc
     roles:
       - rebrec.ludus_windows_keyboard_layout
-    vars:
-      - ludus_windows_keyboard_layout: fr-FR
+
 ```
 
 ## License
 
-[//]: # (If you change the License type, be sure to change the actual LICENSE file as well)
 GPLv3
 
 ## Author Information
 
-This role was created by [{{Your Github Username}}](https://github.com/{{ your github username }}), for [Ludus](https://ludus.cloud/).
+This role was created by [rebrec](https://github.com/rebrec), for [Ludus](https://ludus.cloud/).
