@@ -1,0 +1,25 @@
+---
+dependencies: []
+
+galaxy_info:
+  role_name: ludus_windows_keyboard_layout
+  author: rebrec
+  description: An Ansible Role that installs specific keyboard layout (default to french) on Windows hosts
+  company: rebrec
+  license: GPLv3
+  min_ansible_version: "2.10"
+  platforms:
+    # Modify the platforms here as required
+    # This example includes a lot, see https://github.com/ansible/ansible-lint/blob/main/src/ansiblelint/schemas/meta.json for all possibilities
+    - name: Windows 
+      versions:
+        - "2012R2"
+        - "2016"
+        - "2019"
+        - "2022"
+  galaxy_tags:
+    - ludus
+    - keyboard_layout
+    - windows
+
+collections: [] # Add any collections needed here

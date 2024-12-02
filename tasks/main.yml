@@ -1,0 +1,3 @@
+---
+- name: Windows | Add the keyboard layout {{ ludus_windows_keyboard_layout }}
+  win_shell: $langList = Get-WinUserLanguageList; $langList.Add("{{ludus_windows_keyboard_layout}}"); Set-WinUserLanguageList -LanguageList $langList -Force
